@@ -117,7 +117,7 @@ p{
 
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     color:#424242;
     margin-bottom: 35px;
     text-align: center;
@@ -154,40 +154,44 @@ p {
 .about-content{
     display: flex;
     position: relative;
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
 }
 
 .ab1{
-    position: absolute;
+    position: relative;
     width: auto;
     left: 0;
     top: 0;
     rotate: 0deg;
 }
 
-.ab2{
+/*.ab2{
     position: absolute;
     width: 50px;
     left: 750px;
     top: 450px;
     rotate: 0deg;
 
-}
+}*/
 
 .about.img{
-    width: 50%;
+    flex: 1;
+    width: auto;
 }
 
 .about.img img {
-    width: 350px;
+    width: 76%;
 }
 
 .about-txt{
-    width: 50%;
+    flex: 1;
+    padding-left: 50px;
 }
 
 h2{
-    font-size: 80px;
-    line-height: 90px;
+    font-size: 70px;
+    line-height: 50px;
     color:#3F3F3F;
     margin-bottom: 25px;
     text-align: center;
@@ -211,7 +215,7 @@ h2{
 
 .information{
     padding: 100px 400px 400px 400px;
-    text-align: center;
+    text-align: right;
     background-color: #FBFBFB;
 }
 
@@ -219,21 +223,20 @@ h2{
     position: relative;
 }
 
-/*.in1{
-    position: absolute;
-    width: 50px;
-    left: 0;
-    right: 0;
-    rotate: 220deg;
-}*/
+.in1{
+    width: 70%;
+    position: relative;
+    border-bottom: 25px;
+    border-top: 15px;  
+}
 
-.in2{
+/*.in2{
     position: flex;
     width: 100;
     right: 0;
     top: 0;
     rotate: 0deg;
-}
+}*/
 
 .contact {
     padding: 50px 0;
@@ -242,19 +245,19 @@ h2{
     align-items: center;
 }
 
-.contact-table{
+/*.contact-table{
     padding: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 700px;
     margin-top: -400px;
-}
+}*/
 
-.contact-table span{
+/*.contact-table span{
     font-size: 40px;
     color: #940ca9;
 
-}
+}*/
 
 form{
     display: flex;
@@ -285,7 +288,7 @@ form{
 }
 
 .form-content h2{
-    font-size: 50px;
+    font-size: 55spx;
     color: #3F3F3F;
     margin-bottom: 25px;
 }
@@ -413,8 +416,9 @@ form{
         padding: 30px;
     }
 
-    .about-content{
-        flex-direction: column;
+    .about-content {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
     }
 
     .ab1, .ab2{
@@ -422,17 +426,25 @@ form{
     }
 
     .about-img {
-        width: 100% ;
-        order: 2;
+        order: -1; /* Cambia el orden de la imagen para que esté antes del texto en el flujo del contenido */
+        width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+        text-align: center; /* Centra el contenido */
     }
+
 
     .about-img img {
-        width: 250px;
+        width: 75%; /* Ajusta el ancho de la imagen al 75% del contenedor */
     }
 
-    .about-txt{
-        width: 100%;
-        text-align: center;
+    .about-img, .about-txt {
+        width: 75%; /* Ajusta el ancho de los elementos a 100% */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .about-txt {
+        width: 100%; /* Ajusta el ancho del texto al 100% del contenedor */
+        padding-left: 0; /* Elimina el relleno izquierdo */
+        text-align: center; /* Centra el texto */
     }
 
     h2{
@@ -444,10 +456,21 @@ form{
         padding: 30px 30px 100px 30px;
     }
 
-    .in1 .in2{
-        padding: 30%;
+    .in1, .in2 {
+        width: 100%; /* Ajusta el ancho de los elementos al 100% del contenedor */
+        text-align: center; /* Centra el contenido */
     }
 
+    .in1 {
+        order: -1; /* Cambia el orden de la imagen para que esté antes del texto en el flujo del contenido */
+        width: 100%; /* Restaura el ancho automático */
+        text-align: center; /* Centra el contenido */
+        margin: 0 auto; /* Centrar horizontalmente */    }
+
+    .in1 img {
+       max-width: 75%; /* Ajusta el ancho de la imagen al 75% del contenedor */
+       height: auto;
+    }
     .contact{
         padding: 30px;
     }
