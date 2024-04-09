@@ -442,7 +442,7 @@ form{
     }
 
     .about-txt {
-        width: 100%; /* Ajusta el ancho del texto al 100% del contenedor */
+        width: 75%; /* Ajusta el ancho del texto al 100% del contenedor */
         padding-left: 0; /* Elimina el relleno izquierdo */
         text-align: center; /* Centra el texto */
     }
