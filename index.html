@@ -14,19 +14,20 @@
 <body><!------------------------------------------------------------------------------>
     <header class="header">
         <div class="menu container">
-            <a href="#" class="logo" ><img src="imagenes/logo.png" alt=""></a>
+            <a href="index.html" class="logo" ><img src="imagenes/logo.png" alt=""></a>
             <input type="checkbox" id="menu" />
             <label for="menu">
                 <img src="imagenes/menu.svg"  class="menu-icono" alt="">
             </label>
-            <nav class="navbar">
+            <nav class="navbar hidden">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="Servicios.html">Servicios</a></li>
                     <li><a href="Quienes.html">¿Quiénes Somos?</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+
             <div class="socials-1" >
                 <a href="#"><img src="imagenes/r1.svg" alt=""></a>
                 <a href="#"><img src="imagenes/r2.svg" alt=""></a>
@@ -126,4 +127,21 @@
                 </div>
             </div>
         </footer><!-------------------------------------------------------------------------------------------------------->
-</body><!-------------------------------------------------------------------------------------------------------->
+       
+      <!------- <script>
+            // Obtener el menú y la etiqueta del menú
+            const menu = document.querySelector('.menu');
+            const menuCheckbox = document.getElementById('menu');
+    
+            // Evento clic en el documento
+            document.addEventListener('click', function(event) {
+                console.log('Clic detectado fuera del menú');
+                // Si el clic no es dentro del menú y el menú está desplegado, retraer el menú
+                if (!menu.contains(event.target) && menuCheckbox.checked) {
+                    menuCheckbox.checked = false;
+                }
+            
+            });
+        </script>----->
+
+    </body><!-------------------------------------------------------------------------------------------------------->
