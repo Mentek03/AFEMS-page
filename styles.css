@@ -363,6 +363,7 @@ form{
         left:0;
         right: 0;
         background-color: #3F3F3F;
+        display: none;
     }
 
     .menu .navbar ul li {
@@ -375,7 +376,11 @@ form{
     }
 
     #menu:checked ~ .navbar{
-        display: inline-block;
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
     }
 
     .header-content{
@@ -472,10 +477,5 @@ form{
     .link-img{
         margin-bottom: 15px;
     }
-
-    .navbar .hidden {
-        display: none;
-    }
-
 
 }
